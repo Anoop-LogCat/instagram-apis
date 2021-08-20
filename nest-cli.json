@@ -1,4 +1,18 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "src",
+  "projects": {
+    "insta": {
+      "type": "library",
+      "root": "libs/insta",
+      "entryFile": "index",
+      "sourceRoot": "libs/insta/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/insta/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
 }

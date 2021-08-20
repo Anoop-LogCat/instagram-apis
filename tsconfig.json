@@ -11,6 +11,14 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@app/insta": [
+        "libs/insta/src"
+      ],
+      "@app/insta/*": [
+        "libs/insta/src/*"
+      ]
+    }
   }
 }
