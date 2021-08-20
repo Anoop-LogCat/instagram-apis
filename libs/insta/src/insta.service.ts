@@ -70,6 +70,15 @@ export class InstaService {
     return instaUserMedias;
   }
 
+  async getMediaById(mediaId: string) {
+    const instaMedia = await this.FB(
+      mediaId,
+      this.configService.get('LONG_LIVE_ACCESS_TOKEN'),
+      'comments_count,id,like_count,media_type,media_url,thumbnail_url,timestamp',
+    );
+    return instaMedia;
+  }
+
   async getUserStories(userId: string, limit: number) {
     const instaUserStories = await this.FB(
       `${userId}/stories`,
